@@ -4,40 +4,53 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CS_website</title>
+    <title>@ViewData["Title"] - Department of Computer Science | University of Ibadan</title>
+    <link rel="icon" type="image/x-icon" href="~/school.ico" />
 
+
+    @* SEO *@
+    <meta name="description" content="Department of Computer Science, University of Ibadan" />
+    <meta name="author" content="Department of Computer Science, University of Ibadan" />
+    <meta name="keywords" content="Department of Computer Science, University of Ibadan" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="google" content="notranslate" />
+
+
+    @* tailwind css cdn *@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+
 </head>
 
-<body>
+<body class="text-xs md:text-sm lg:text-base font-light">
     <header>
         <nav>
-            this is the nav
             <div class="mx-auto">
                 <ul class="flex gap-3 items-center justify-center">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Try">Try</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Try">Try</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div>
         <main>
             @RenderBody()
         </main>
     </div>
 
     <footer>
-        <div>
-            this is a footer
-        </div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, illo provident? Voluptates, consectetur
+        perferendis officiis quaerat rerum dignissimos maiores corrupti.
     </footer>
 
     @await RenderSectionAsync("Scripts", required: false)
