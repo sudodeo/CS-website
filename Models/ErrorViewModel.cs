@@ -6,3 +6,5 @@ public class ErrorViewModel
 
     public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 }
+
+// I have no business here, I'm just a comment
