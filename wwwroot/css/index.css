@@ -2,7 +2,10 @@
 
 :root {
   /* color codes */
-  --text-dark: #333333;
+  --text-dark: #585858;
+  --main-red: #800000;
+  --dark: #1a1a1a;
+  --transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 * {
@@ -14,4 +17,59 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  color: var(--text-dark);
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  transition: var(--transition);
+}
+
+nav.activate_scroll {
+  position: fixed;
+}
+
+.nav_content {
+  border-top: 6px solid var(--main-red);
+}
+
+.nav-item {
+  color: var(--text-dark);
+}
+
+.nav-item:hover {
+  color: var(--main-red);
+}
+
+footer {
+  clip-path: polygon(
+    0 60px,
+    147px 60px,
+    177px 30px,
+    calc(100% - 177px) 30px,
+    calc(100% - 147px) 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+  background-color: var(--dark);
+  width: 100%;
+  min-height: 300px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    clip-path: polygon(
+      0 100%,
+      0 60px,
+      30px 30px,
+      calc(100% - 30px) 30px,
+      100% 0,
+      100% 100%
+    );
+  }
 }
