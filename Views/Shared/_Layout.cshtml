@@ -22,26 +22,36 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
 
+    @* import javascript using defer *@
+    <script src="~/js/index.js" asp-append-version="true" defer></script>
 </head>
 
 <body class="text-xs md:text-sm lg:text-base font-light">
-    <header>
-        <nav>
-            <div class="mx-auto">
-                <ul class="flex gap-3 items-center justify-center">
-                    <li class="nav-item">
-                        <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-area="" asp-controller="Home" asp-action="Try">Try</a>
-                    </li>
-                </ul>
+    <nav class="px-5 sm:px-10 md:px-20" id="navbar">
+        <div class="flex justify-between items-center py-7 nav_content">
+            <div class="logo">
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo-light.png" alt="Department of Computer Science, University of Ibadan"
+                        id="logo" />
+                </a>
             </div>
-        </nav>
-    </header>
+
+            <ul class="flex gap-4 md:gap-8 items-center font-semibold">
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Curriculum" asp-action="Index">Curriculum</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Programs" asp-action="Index">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="StdAssociation" asp-action="Index">Nacos UI</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div>
         <main>
             @RenderBody()
@@ -49,11 +59,28 @@
     </div>
 
     <footer>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, illo provident? Voluptates, consectetur
-        perferendis officiis quaerat rerum dignissimos maiores corrupti.
+        <div class="site_footer pt-24 px-5 sm:px-10 md:px-20">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, quos obcaecati quae facilis ipsum veniam
+            provident qui dolorum cum doloribus impedit repellat esse minus, recusandae cupiditate, voluptatum
+            voluptatibus accusantium! Iste iusto cum modi vitae qui blanditiis et quod laborum, itaque id possimus rerum
+            aliquam soluta, odit ipsam a hic! Aliquam, facilis ipsum eveniet sequi nesciunt beatae nostrum quisquam
+            velit perspiciatis. Eum est nisi eveniet magni adipisci ipsum sapiente, eius placeat sequi ratione? Eaque,
+            vero consequatur! Sunt reprehenderit qui deserunt similique harum sapiente ullam ducimus vitae numquam eos
+            atque id, cum enim suscipit, quibusdam fugit non illum libero aliquid? Neque nihil distinctio voluptatibus!
+            Illum molestiae, quo omnis amet dignissimos quaerat? Architecto similique iure fuga quod doloribus minima
+            deserunt dignissimos ipsa veniam ut! Sint, voluptates nobis! Nisi vero, ullam ratione voluptatibus quisquam
+            sunt omnis minima alias odio! Quaerat adipisci magnam iusto molestias illo placeat aut quidem porro
+            aspernatur voluptas vero, labore, quae impedit itaque. Optio architecto distinctio corrupti repellendus
+            harum porro maiores quibusdam corporis. Blanditiis sint vero sed qui, quibusdam nesciunt perferendis nostrum
+            excepturi amet tenetur possimus quam fuga earum. Necessitatibus esse labore ex consectetur modi dolorem
+            blanditiis doloremque sint? Quae fuga aperiam voluptates sapiente fugit cum consequatur accusantium et quas
+            perspiciatis.
+        </div>
+
     </footer>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 
 </html>
