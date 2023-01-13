@@ -1,8 +1,8 @@
 name: CS website 
 
 on:
-  pull-requests:
-    branches: [ main  ]
+  pull-request:
+    branches: [ "main"  ]
 
 jobs:
   build:
