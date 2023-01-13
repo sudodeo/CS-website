@@ -1,4 +1,4 @@
-name: CS-Website-Worflow
+name: CS-Website-Workflow
 on:
   pull_request:
     types:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup .Net 6.0
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: "6.0.x"
+          dotnet-version: '6.0.x'
 
       - name: Restore dependencies
         run: dotnet restore
