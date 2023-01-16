@@ -89,17 +89,14 @@ nav.activate_scroll .nav-item:hover {
 }
 
 .hero {
-  background-color: var(--dark);
+  background: var(--dark) no-repeat center/cover fixed;
   background-image: linear-gradient(
       180deg,
       rgb(0, 0, 0) 0%,
       rgba(0, 0, 0, 0.432) 100%
     ),
     var(--bg);
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: top;
-  background-attachment: fixed;
   width: 100%;
   min-height: 765px;
   clip-path: polygon(
@@ -110,6 +107,53 @@ nav.activate_scroll .nav-item:hover {
     100% calc(100% - 130px),
     100% 0
   );
+  animation: slide_bg 10s linear;
+}
+
+@keyframes slide_bg {
+  0% {
+    background-position: bottom;
+  }
+  100% {
+    background-position: top;
+  }
+}
+
+.typing_cursor {
+  display: inline-block;
+  translate: 0 7px;
+  width: 1px;
+  height: 2em;
+  background-color: var(--white);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.main_btn {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+.main_btn.filled {
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+.main_btn.transparent {
+  background-color: transparent;
+  color: var(--white);
+  outline: 1px solid var(--white);
 }
 
 /* footer styling */
@@ -158,26 +202,5 @@ footer {
       100% 0,
       100% 100%
     );
-  }
-}
-
-.typing_cursor {
-  display: inline-block;
-  translate: 0 7px;
-  width: 1px;
-  height: 2em;
-  background-color: var(--white);
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }

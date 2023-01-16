@@ -2,8 +2,8 @@
     ViewData["Title"] = "Home";
 }
 
-<div class="hero home flex justify-center text-white px-5 sm:px-10 md:px-20">
-    <div class="mt-32 md:mt-52 text-center">
+<header class="hero home flex justify-center text-white px-5 sm:px-10 md:px-20">
+    <div class="mt-32 md:mt-56 text-center">
         <h1 class="capitalize font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl title_text">
             <p>
                 Welcome to the department
@@ -20,8 +20,14 @@
                 <div class="typing_cursor"></div>
             </div>
         </div>
+
+        @* buttons *@
+        <div class="mt-10 flex items-center justify-center gap-5">
+            <a href="" class="main_btn filled">Learn more</a>
+            <a href="" class="main_btn transparent">View Programs</a>
+        </div>
     </div>
-</div>
+</header>
 
 <div>
     @* <h1 class="display-4 text-red-500">Hi</h1> *@
@@ -29,4 +35,6 @@
     <p>
         This is a simple application to demonstrate the use of the asp.net core framework.
     </p>
+
+
 </div>
