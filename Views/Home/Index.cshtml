@@ -3,7 +3,7 @@
 }
 
 <div class="hero home flex justify-center text-white px-5 sm:px-10 md:px-20">
-    <div class="mt-32 md:mt-52 max-w-lg sm:max-w-xl lg:max-w-4xl text-center">
+    <div class="mt-32 md:mt-52 text-center">
         <h1 class="capitalize font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl title_text">
             <p>
                 Welcome to the department
@@ -12,9 +12,14 @@
                 of Computer Science
             </p>
         </h1>
-        <ul class=" dynamic_texts mt-5 text-sm sm:text-base md:text-lg lg:text-xl">
-            <li>Where technology and innovation meet.</li>
-        </ul>
+
+        @* dynamic texts *@
+        <div class="mt-5 flex justify-center">
+            <div>
+                <span class="dynamic_texts text-sm sm:text-base md:text-lg lg:text-xl relative"></span>
+                <div class="typing_cursor"></div>
+            </div>
+        </div>
     </div>
 </div>
 

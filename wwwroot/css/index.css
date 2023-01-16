@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 :root {
-  /* color codes */
   --text-dark: #585858;
   --main-red: #800000;
   --faded-white: #b4b3b3;
@@ -17,6 +16,7 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -158,5 +158,26 @@ footer {
       100% 0,
       100% 100%
     );
+  }
+}
+
+.typing_cursor {
+  display: inline-block;
+  translate: 0 7px;
+  width: 1px;
+  height: 2em;
+  background-color: var(--white);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
