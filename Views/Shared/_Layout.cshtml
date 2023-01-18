@@ -22,26 +22,53 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
 
+    @* font awesome *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    @* import javascript using defer *@
+    <script src="~/js/index.js" asp-append-version="true" defer></script>
 </head>
 
 <body class="text-xs md:text-sm lg:text-base font-light">
-    <header>
-        <nav>
-            <div class="mx-auto">
-                <ul class="flex gap-3 items-center justify-center">
-                    <li class="nav-item">
-                        <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-area="" asp-controller="Home" asp-action="Try">Try</a>
-                    </li>
-                </ul>
+    <nav class="px-5 sm:px-10 md:px-20" id="navbar">
+        <div class="flex justify-between items-center py-7 nav_content">
+            <div class="logo">
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo-light.png" alt="Department of Computer Science, University of Ibadan"
+                        id="logo" />
+                </a>
             </div>
-        </nav>
-    </header>
+
+            <ul class="hidden sm:flex gap-4 md:gap-8 items-center font-semibold">
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Curriculum" asp-action="Index">Curriculum</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Programs" asp-action="Index">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="StdAssociation" asp-action="Index">Nacos UI</a>
+                </li>
+            </ul>
+
+            <div class="block sm:hidden text-white">
+                <button class="flex items-center px-3 py-2 text-white hover:text-white">
+                    <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+
+
+    </nav>
     <div>
         <main>
             @RenderBody()
@@ -49,10 +76,28 @@
     </div>
 
     <footer>
-        This is the footer
+        <div class="site_footer pt-24 px-5 sm:px-10 md:px-20">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, quos obcaecati quae facilis ipsum veniam
+            provident qui dolorum cum doloribus impedit repellat esse minus, recusandae cupiditate, voluptatum
+            voluptatibus accusantium! Iste iusto cum modi vitae qui blanditiis et quod laborum, itaque id possimus rerum
+            aliquam soluta, odit ipsam a hic! Aliquam, facilis ipsum eveniet sequi nesciunt beatae nostrum quisquam
+            velit perspiciatis. Eum est nisi eveniet magni adipisci ipsum sapiente, eius placeat sequi ratione? Eaque,
+            vero consequatur! Sunt reprehenderit qui deserunt similique harum sapiente ullam ducimus vitae numquam eos
+            atque id, cum enim suscipit, quibusdam fugit non illum libero aliquid? Neque nihil distinctio voluptatibus!
+            Illum molestiae, quo omnis amet dignissimos quaerat? Architecto similique iure fuga quod doloribus minima
+            deserunt dignissimos ipsa veniam ut! Sint, voluptates nobis! Nisi vero, ullam ratione voluptatibus quisquam
+            sunt omnis minima alias odio! Quaerat adipisci magnam iusto molestias illo placeat aut quidem porro
+            aspernatur voluptas vero, labore, quae impedit itaque. Optio architecto distinctio corrupti repellendus
+            harum porro maiores quibusdam corporis. Blanditiis sint vero sed qui, quibusdam nesciunt perferendis nostrum
+            excepturi amet tenetur possimus quam fuga earum. Necessitatibus esse labore ex consectetur modi dolorem
+            blanditiis doloremque sint? Quae fuga aperiam voluptates sapiente fugit cum consequatur accusantium et quas
+            perspiciatis.
+        </div>
+
     </footer>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 
 </html>

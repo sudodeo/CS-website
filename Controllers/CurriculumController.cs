@@ -1,14 +1,14 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CS_website.Models;
 
 namespace CS_website.Controllers;
 
-public class HomeController : Controller
+public class CurriculumController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILogger<CurriculumController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public CurriculumController(ILogger<CurriculumController> logger)
     {
         _logger = logger;
     }
@@ -17,16 +17,6 @@ public class HomeController : Controller
     {
         return View();
     }
-
-    // public IActionResult Privacy()
-    // {
-    //     return View();
-    // }
-
-    // public IActionResult Try()
-    // {
-    //     return View();
-    // }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

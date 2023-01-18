@@ -1,8 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 :root {
   /* color codes */
-  --text-dark: #333333;
+  --text-dark: #585858;
+  --main-red: #800000;
+  --faded-white: #b4b3b3;
+  --white: #ffffff;
+  --dark: #1a1a1a;
+  --transition: 0.3s;
+  /* cubic-bezier(0.175, 0.885, 0.32, 1.275) */
 }
 
 * {
@@ -14,4 +21,142 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  color: var(--text-dark);
+  position: relative;
+}
+
+.title_text {
+  font-family: "Oswald", sans-serif;
+  color: var(--white);
+}
+
+/* Nav styling */
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  transition: var(--transition);
+  z-index: 300;
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 90px;
+  }
+}
+
+nav .nav-item {
+  color: var(--faded-white);
+}
+
+nav .nav-item:hover {
+  color: var(--white);
+}
+
+nav.activate_scroll {
+  position: fixed;
+}
+
+nav.activate_scroll div button {
+  color: var(--text-dark);
+}
+
+nav.activate_scroll .nav-item {
+  color: var(--text-dark);
+}
+
+nav.activate_scroll .nav-item:hover {
+  color: var(--main-red);
+}
+
+.nav_content {
+  border-top: 6px solid var(--main-red);
+}
+
+.logo a img {
+  width: 90%;
+}
+
+/* hero styling */
+
+.hero.home {
+  --bg: url("../images/hero-home.png");
+}
+
+.hero.programs {
+  --bg: url("../images/hero-programs.png");
+}
+
+.hero {
+  background-color: var(--dark);
+  background-image: linear-gradient(
+      180deg,
+      rgb(0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.432) 100%
+    ),
+    var(--bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 765px;
+  clip-path: polygon(
+    0 0,
+    0 100%,
+    65px calc(100% - 65px),
+    calc(100% - 65px) calc(100% - 65px),
+    100% calc(100% - 130px),
+    100% 0
+  );
+}
+
+/* footer styling */
+
+footer {
+  clip-path: polygon(
+    0 60px,
+    147px 60px,
+    177px 30px,
+    calc(100% - 177px) 30px,
+    calc(100% - 147px) 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+  background-color: var(--dark);
+  width: 100%;
+  min-height: 300px;
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+  .logo a img {
+    width: 70%;
+  }
+
+  .hero {
+    min-height: 440px;
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      30px calc(100% - 30px),
+      calc(100% - 30px) calc(100% - 30px),
+      100% calc(100% - 60px),
+      100% 0
+    );
+  }
+
+  footer {
+    clip-path: polygon(
+      0 100%,
+      0 60px,
+      30px 30px,
+      calc(100% - 30px) 30px,
+      100% 0,
+      100% 100%
+    );
+  }
 }
