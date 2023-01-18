@@ -2,9 +2,10 @@
     ViewData["Title"] = "Home";
 }
 
-<div class="hero home flex justify-center text-white px-5 sm:px-10 md:px-20">
-    <div class="mt-32 md:mt-52 max-w-lg sm:max-w-xl lg:max-w-4xl text-center">
-        <h1 class="capitalize font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl title_text">
+@* hero section *@
+<header class="hero home flex justify-center text-white px-5 sm:px-10 md:px-20">
+    <div class="mt-32 md:mt-56 text-center">
+        <h1 class="capitalize text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-medium second_font text-white">
             <p>
                 Welcome to the department
             </p>
@@ -12,16 +13,83 @@
                 of Computer Science
             </p>
         </h1>
-        <ul class=" dynamic_texts mt-5 text-sm sm:text-base md:text-lg lg:text-xl">
-            <li>Where technology and innovation meet.</li>
-        </ul>
-    </div>
-</div>
 
-<div>
-    @* <h1 class="display-4 text-red-500">Hi</h1> *@
-    @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core"></p> *@
-    <p>
-        This is a simple application to demonstrate the use of the asp.net core framework.
-    </p>
-</div>
+        @* dynamic texts *@
+        <div class="mt-2 md:mt-5 flex justify-center">
+            <div>
+                <span class="dynamic_texts text-sm sm:text-base md:text-lg lg:text-xl relative"></span>
+                <div class="typing_cursor"></div>
+            </div>
+        </div>
+
+        @* buttons *@
+        <div class="mt-5 md:mt-10 flex items-center justify-center gap-3">
+            <a href="" class="main_btn filled">Learn more</a>
+            <a asp-area="" asp-controller="Programs" asp-action="Index" class="main_btn transparent">View Programs</a>
+        </div>
+    </div>
+</header>
+
+<section class="px-5 sm:px-10 md:px-20">
+    <div class="mt-5 section_cut max-w-6xl mx-auto p-8">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium vero vitae nihil velit
+        asperiores ab omnis. At dignissimos beatae obcaecati. Fugiat temporibus magnam hic nihil enim blanditiis sed
+        facere.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita commodi, velit praesentium fugiat numquam cum
+        non error asperiores laudantium, aut pariatur soluta a fuga at porro quia unde labore. Voluptatum!
+    </div>
+</section>
+
+
+<section class="px-5 sm:px-10 md:px-20 my-16 second_bg_color grid md:grid-cols-2 gap-y-10 py-16 preamble">
+    <div>
+        <img src="~/images/students.jpg" width="600px" alt="students">
+    </div>
+    <div class="space-y-4">
+        <h2 class="text-2xl md:text-4xl font-medium second_font">Welcome to UI Computer Science.</h2>
+        <p>
+            The University of Ibadan is a premier institution for computer science education. Here, students and faculty
+            can explore the latest developments in the field, from theory to practical applications. They can work at
+            the intersection of computer science and other disciplines, including the social and physical sciences,
+            policy, business, and biomedicine, benefit from the diverse and vibrant city of Ibadan, and make an
+            immediate impact, both locally and globally.
+        </p>
+        <div>
+            <a href="" class="link block">
+                <span>
+                    An Expanding, Award-Winning CS Faculty
+                </span>
+                <svg class="button-arrow" width="14" height="10" viewBox="0 0 10 10" aria-hidden="true">
+                    <g>
+                        <path class="button-arrow__line" d="M0 5h12"></path>
+                        <path class="button-arrow__tip" d="M1 1l4 4-4 4"></path>
+                    </g>
+                </svg>
+            </a>
+
+            <a href="" class="link block">
+                <span>
+                    An Expanding, Award-Winning CS Faculty
+                </span>
+                <svg class="button-arrow" width="14" height="10" viewBox="0 0 10 10" aria-hidden="true">
+                    <g>
+                        <path class="button-arrow__line" d="M0 5h12"></path>
+                        <path class="button-arrow__tip" d="M1 1l4 4-4 4"></path>
+                    </g>
+                </svg>
+            </a>
+
+            <a href="" class="link block">
+                <span>
+                    An Expanding, Award-Winning CS Faculty
+                </span>
+                <svg class="button-arrow" width="14" height="10" viewBox="0 0 10 10" aria-hidden="true">
+                    <g>
+                        <path class="button-arrow__line" d="M0 5h12"></path>
+                        <path class="button-arrow__tip" d="M1 1l4 4-4 4"></path>
+                    </g>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
