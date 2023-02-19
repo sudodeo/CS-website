@@ -215,6 +215,73 @@
   color: var(--dark);
 }
 
+.research_highlights {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1fr;
+  gap: 20px;
+}
+
+.research_highlights > li:not(:first-child) {
+  height: 260px;
+  background-color: var(--dark);
+  overflow: hidden;
+  position: relative;
+}
+
+.research_highlights > li:not(:first-child) > article {
+  --dark: #1a1a1aec;
+  height: 100%;
+  padding: 20px;
+  background: var(--dark);
+  color: var(--white);
+  z-index: 3;
+  position: relative;
+  transform: translateY(-100%);
+  transition: var(--animation) 1s;
+  color: var(--faded-white);
+}
+
+.research_highlights li article h3 {
+  color: var(--white);
+}
+
+.research_highlights li > div {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.research_highlights li img {
+  height: 110%;
+  width: 100%;
+  object-fit: cover;
+  transition: var(--animation) 2s;
+}
+
+/* media screen hover */
+@media (hover: hover) {
+  .research_highlights li article {
+    translate: 0 77%;
+  }
+
+  .research_highlights li article p {
+    opacity: 0;
+    transition: 0.7s;
+  }
+
+  .research_highlights li:hover > article {
+    translate: 0 0;
+  }
+
+  .research_highlights li:hover > article > p {
+    opacity: 1;
+  }
+
+  .research_highlights li:hover > div > img {
+    translate: 0 -20px;
+  }
+}
+
 @media (max-width: 1024px) {
   .research_areas li {
     gap: 10px;
@@ -242,5 +309,9 @@
   .research_areas {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+
+  .research_highlights {
+    grid-template-columns: 1fr;
   }
 }
