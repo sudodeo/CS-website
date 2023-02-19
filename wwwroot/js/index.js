@@ -1,8 +1,6 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿"use strict";
 
-"use strict";
-
+/////////////// NAVBAR //////////////////////
 // Show navbar on scroll up and hide on scroll down
 let lastScrollTop = 0;
 const navbar = document.getElementById("navbar");
@@ -28,7 +26,24 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollTop;
 });
 
-// type writer effect
+/////////////// learn more button //////////////////////
+const learnMoreBtn = document.getElementById("learnMore");
+
+learnMoreBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 1000,
+    behavior: "smooth",
+  });
+});
+
+logo.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+//////////////// TYPEWRITER EFFECT ///////////////////////
 const typedTextSpan = document.querySelector(".dynamic_texts");
 const strings = [
   "Where technology and innovation meet.",

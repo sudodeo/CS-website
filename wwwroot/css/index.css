@@ -12,14 +12,16 @@
   --border-solid-grey: #cacacaca;
   --gold: #eaaa00;
   --transition: 0.3s;
-  /* cubic-bezier(0.175, 0.885, 0.32, 1.275) */
+  --animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  /* cubic-bezier(0.175, 0.885, 0.32, 1.275); */
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: none;
+  outline-color: transparent;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -33,6 +35,11 @@ body {
 
 a {
   display: inline-block;
+}
+
+.article_title {
+  color: var(--gold);
+  font-weight: 500;
 }
 
 .second_bg_color {
@@ -141,6 +148,13 @@ nav.activate_scroll .nav-item:hover {
   animation: blink 1s infinite;
 }
 
+/* at phone view, edit typing cursor height */
+@media (max-width: 768px) {
+  .typing_cursor {
+    height: 1.5em;
+  }
+}
+
 @keyframes blink {
   0% {
     opacity: 0;
@@ -236,7 +250,7 @@ nav.activate_scroll .nav-item:hover {
   width: 80%;
   padding-left: 30px;
   justify-self: start;
-  font-size: 18px;
+  font-size: 17 px;
 }
 
 @media (max-width: 1024px) {
@@ -300,6 +314,43 @@ nav.activate_scroll .nav-item:hover {
   stroke: var(--link-color);
   transform: scale(1);
   transition: transform var(--hoverTransition);
+}
+
+.news_section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.news_section > li:not(:first-child) {
+  position: relative;
+  background-color: var(--dark);
+  overflow: hidden;
+  min-height: 400px;
+  cursor: pointer;
+}
+
+.news_section li img {
+  z-index: 1;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: var(--animation) 2s;
+}
+
+.news_section li:hover > img {
+  scale: 1.2;
+}
+
+.news_section li article {
+  height: 100%;
+  margin: 0 0 0;
+  padding: 20px;
+  background: var(--dark);
+  color: var(--white);
+  text-transform: capitalize;
+  z-index: 3;
+  position: relative;
 }
 
 /* footer styling */
