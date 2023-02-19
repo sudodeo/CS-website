@@ -35,13 +35,41 @@
 
 <!-- gold section -->
 <section class="px-5 sm:px-10 md:px-20">
-  <div class="mt-5 section_cut max-w-6xl mx-auto p-8">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-    laudantium vero vitae nihil velit asperiores ab omnis. At dignissimos beatae
-    obcaecati. Fugiat temporibus magnam hic nihil enim blanditiis sed facere.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita commodi,
-    velit praesentium fugiat numquam cum non error asperiores laudantium, aut
-    pariatur soluta a fuga at porro quia unde labore. Voluptatum!
+  <div
+    class="mt-5 section_cut max-w-6xl mx-auto p-8 flex flex-col md:flex-row items-start md:items-center gap-5"
+  >
+    <h2 class="font-bold text-xl md:text-2xl mr-5 capitalize">
+      Innovative
+      <br class="hidden md:block" />
+      learners
+    </h2>
+
+    <p class="flex-1">
+      Are you interested in pursuing a career in computer science? Our BSc
+      program provides a comprehensive education in this exciting and rapidly
+      evolving field
+    </p>
+
+    <a
+      class="link_btn link"
+      asp-area=""
+      asp-controller="Programs"
+      asp-action="Index"
+    >
+      <span> Our Programs </span>
+      <svg
+        class="button-arrow"
+        width="14"
+        height="10"
+        viewBox="0 0 10 10"
+        aria-hidden="true"
+      >
+        <g>
+          <path class="button-arrow__line" d="M0 5h12"></path>
+          <path class="button-arrow__tip" d="M1 1l4 4-4 4"></path>
+        </g>
+      </svg>
+    </a>
   </div>
 </section>
 
@@ -197,14 +225,17 @@
 
   <ul class="research_areas mt-10">
     <li>
-      <img src="https://cdn-icons-png.flaticon.com/128/820/820875.png" alt="" />
+      <img
+        src="https://cdn-icons-png.flaticon.com/128/820/820875.png"
+        alt="AI & Machine Learning"
+      />
       <h3>AI & Machine Learning</h3>
     </li>
 
     <li>
       <img
         src="https://cdn-icons-png.flaticon.com/128/4962/4962890.png"
-        alt=""
+        alt="Computing Education"
       />
       <h3>Computing Education</h3>
     </li>
@@ -212,7 +243,7 @@
     <li>
       <img
         src="https://cdn-icons-png.flaticon.com/128/2906/2906274.png"
-        alt=""
+        alt="Data & Databases"
       />
       <h3>Data & Databases</h3>
     </li>
@@ -220,7 +251,7 @@
     <li>
       <img
         src="https://cdn-icons-png.flaticon.com/128/1457/1457331.png"
-        alt=""
+        alt="human computer interaction"
       />
       <h3>human computer interaction</h3>
     </li>
@@ -228,20 +259,23 @@
     <li>
       <img
         src="https://cdn-icons-png.flaticon.com/128/7069/7069924.png"
-        alt=""
+        alt="Programming Languages"
       />
       <h3>Programming Languages</h3>
     </li>
 
     <li>
-      <img src="https://cdn-icons-png.flaticon.com/128/900/900618.png" alt="" />
+      <img
+        src="https://cdn-icons-png.flaticon.com/128/900/900618.png"
+        alt="Scientific & High Performance Computing"
+      />
       <h3>Scientific & High Performance Computing</h3>
     </li>
 
     <li>
       <img
         src="https://cdn-icons-png.flaticon.com/128/9305/9305711.png"
-        alt=""
+        alt="Security & Privacy"
       />
       <h3>Security & Privacy</h3>
     </li>
@@ -249,7 +283,7 @@
     <li>
       <img
         src="https://cdn-icons-png.flaticon.com/128/1935/1935955.png"
-        alt=""
+        alt="Systems, Architecture & Networking"
       />
       <h3>Systems, Architecture & Networking</h3>
     </li>
@@ -265,7 +299,7 @@
     <li>
       <img
         src="https://cdn-icons-png.flaticon.com/128/9692/9692428.png"
-        alt=""
+        alt="Visual Computing"
       />
       <h3>Visual Computing</h3>
     </li>
@@ -274,7 +308,7 @@
 
 <!-- Research Highlights -->
 <ul
-  class="px-5 sm:px-10 md:px-20 xl:px-40 px-5 sm:px-10 md:px-20 xl:px-40 my-32 research_highlights"
+  class="px-5 sm:px-10 md:px-20 xl:px-40 px-5 sm:px-10 md:px-20 xl:px-40 my-20 research_highlights"
 >
   <li>
     <h2 class="text-2xl md:text-4xl font-medium second_font text_dark">
@@ -336,3 +370,77 @@
     </article>
   </li>
 </ul>
+
+<!-- blue section -->
+<section class="px-5 sm:px-10 md:px-20">
+  <div
+    class="mt-5 section_cut blue_bg max-w-6xl mx-auto p-8 flex flex-col md:flex-row items-start md:items-center gap-5"
+  >
+    <h2 class="font-bold text-xl md:text-2xl mr-5 capitalize">
+      Cutting-edge
+      <br class="hidden md:block" />
+      curriculum
+    </h2>
+
+    <p class="flex-1">
+      Are you ready to take your skills to the next level and advance your
+      career in Computer Science? We offer a diverse range of courses and
+      programs designed to meet the needs of both aspiring and experienced
+      professionals in the field.
+    </p>
+
+    <a
+      asp-area=""
+      asp-controller="Curriculum"
+      asp-action="Index"
+      class="link_btn link"
+    >
+      <span> Our Curriculum </span>
+      <svg
+        class="button-arrow"
+        width="14"
+        height="10"
+        viewBox="0 0 10 10"
+        aria-hidden="true"
+      >
+        <g>
+          <path class="button-arrow__line" d="M0 5h12"></path>
+          <path class="button-arrow__tip" d="M1 1l4 4-4 4"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- diversity region -->
+<section
+  class="px-5 sm:px-10 md:px-20 xl:px-40 my-16 second_bg_color grid md:grid-cols-2 gap-y-10 py-16 preamble gap-5"
+>
+  <div class="order-2">
+    <img
+      src="https://images.pexels.com/photos/8556337/pexels-photo-8556337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      width="100%"
+      alt="students"
+    />
+  </div>
+
+  <div class="space-y-4">
+    <h2 class="text-2xl md:text-4xl font-medium second_font text_dark">
+      Equity, Diversity, & Inclusion at Unibadan CS
+    </h2>
+
+    <p>
+      At the Department of Computer Science, University of Ibadan, we are
+      committed to creating an environment that is diverse, equitable, and
+      inclusive. We recognize that diversity in all its forms, including race,
+      gender, ethnicity, age, religion, and ability, is a strength that
+      contributes to a richer and more dynamic learning and working community.
+      We are dedicated to promoting equal opportunities and respect for all
+      members of our community, and strive to ensure that our policies,
+      programs, and practices are inclusive and accessible to everyone. We
+      believe that a commitment to equity, diversity, and inclusion is essential
+      to promoting creativity, innovation, and excellence in our academic
+      pursuits and beyond.
+    </p>
+  </div>
+</section>
