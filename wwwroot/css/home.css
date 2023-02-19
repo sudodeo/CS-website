@@ -217,7 +217,7 @@
 
 .research_highlights {
   display: grid;
-  grid-template-columns: 0.8fr 1fr 1fr;
+  grid-template-columns: 0.6fr 1fr 1fr;
   gap: 20px;
 }
 
