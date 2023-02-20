@@ -138,8 +138,12 @@
             <li>
               <a
                 href="javascript:void(0)"
-                onclick="document.getElementById('preamble').scrollIntoView({ behavior: 'smooth', block: 'start' }); return false;"
-                >About</a
+                onclick=" window.scrollTo({
+                top: document.getElementById('preamble').offsetTop - 120,
+                behavior: 'smooth',
+              });"
+              >
+                About</a
               >
             </li>
             <li>

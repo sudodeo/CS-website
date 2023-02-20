@@ -2,8 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* import css in the same directory */
-@import url("home.css");
 @import url("loader.css");
+@import url("home.css");
+@import url("programs.css");
 
 :root {
   --text-dark: #585858;
@@ -12,6 +13,7 @@
   --faded-white: #b4b3b3;
   --white: #ffffff;
   --dark: #1a1a1a;
+  --dark-transparent: #1a1a1a9a;
   --link-color: #18a3c5;
   --deep-blue: #00718e;
   --border-solid-grey: #cacacaca;
@@ -21,7 +23,6 @@
   --transition: 0.3s;
   --animation: cubic-bezier(0.075, 0.82, 0.165, 1);
   --faded-brown: #fdf7f2;
-
   /* cubic-bezier(0.175, 0.885, 0.32, 1.275); */
 }
 
@@ -71,6 +72,12 @@ a {
   color: var(--dark);
 }
 
+.hero_intro {
+  bottom: 30%;
+  background-color: var(--dark-transparent);
+  padding: 1rem 2rem;
+  max-width: 60%;
+}
 /* Nav styling */
 nav {
   position: absolute;
@@ -116,10 +123,6 @@ nav.activate_scroll .nav-item:hover {
 }
 
 /* hero styling */
-.hero.programs {
-  --bg: url("../images/hero-programs.png");
-}
-
 .hero {
   background: var(--dark) no-repeat center/cover fixed;
   background-image: linear-gradient(

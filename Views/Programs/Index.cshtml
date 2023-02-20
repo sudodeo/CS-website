@@ -1,16 +1,181 @@
-@{
-    ViewData["Title"] = "Programs";
-}
+@{ ViewData["Title"] = "Programs"; }
 
-<div class="hero programs flex text-white px-5 sm:px-10 md:px-20">
-    <div class="mt-32">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit similique laboriosam dolorem aspernatur!
-        Facilis dolore saepe adipisci! Qui adipisci sed ut repellendus labore voluptas, in at obcaecati vero, illum
-        porro!
+<header class="hero programs flex text-white px-5 sm:px-10 md:px-20 relative">
+  <div
+    class="absolute hero_intro md:mt-80 second_font text-3xl md:text-4xl lg:text-6xl break-all"
+  >
+    Programs
+  </div>
+</header>
+
+<!-- undergraduate -->
+<section
+  class="px-5 sm:px-10 md:px-20 xl:px-40 py-20 grid md:grid-cols-2 gap-y-10 py-16 preamble"
+  id="preamble"
+>
+  <div>
+    <img
+      src="https://images.pexels.com/photos/5940845/pexels-photo-5940845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      width="100%"
+      alt="students"
+    />
+  </div>
+  <div class="space-y-4">
+    <h2 class="text-2xl md:text-4xl font-medium second_font text_dark">
+      Undergraduate
+    </h2>
+
+    <p class="mb-3">
+      The undergraduate program in Computer Science at the University of Ibadan
+      provides students with a comprehensive understanding of computing
+      principles and practices. The curriculum covers diverse topics, and
+      students have opportunities to gain hands-on experience through research
+      projects and internships.
+    </p>
+
+    <p class="mb-5">
+      Graduates of the program are well-prepared for further studies or careers
+      in the computing industry. They are in high demand by employers in various
+      sectors, and their degree from the University of Ibadan positions them to
+      make significant contributions to the advancement of the industry and
+      society.
+    </p>
+
+    <div>
+      <a
+        asp-area=""
+        asp-controller="Curriculum"
+        asp-action="Index"
+        class="link block"
+      >
+        <span> Our Courses </span>
+        <svg
+          class="button-arrow"
+          width="14"
+          height="10"
+          viewBox="0 0 10 10"
+          aria-hidden="true"
+        >
+          <g>
+            <path class="button-arrow__line" d="M0 5h12"></path>
+            <path class="button-arrow__tip" d="M1 1l4 4-4 4"></path>
+          </g>
+        </svg>
+      </a>
     </div>
-</div>
+  </div>
+</section>
 
-<div class="text-justify">
-    <h1 class="display-4 text-red-500">Welcome to the programs page</h1>
-    <p>This is the programs page.</p>
-</div>
+<!-- masters -->
+<section
+  class="px-5 sm:px-10 md:px-20 xl:px-40 py-20 grid md:grid-cols-2 gap-y-10 py-16 preamble second_bg_color"
+  id="preamble"
+>
+  <div class="md:order-2">
+    <img
+      src="https://images.pexels.com/photos/5905956/pexels-photo-5905956.jpeg?auto=compress&cs=tinysrgb&w=600"
+      width="100%"
+      alt="students"
+    />
+  </div>
+  <div class="space-y-4">
+    <h2 class="text-2xl md:text-4xl font-medium second_font text_dark">
+      Master's (BSC)
+    </h2>
+
+    <p class="mb-3">
+      The Master's program in Computer Science at the University of Ibadan
+      provides students with advanced knowledge and skills in computing
+      principles and practices. The curriculum covers a wide range of topics
+      including advanced algorithms, artificial intelligence, and machine
+      learning. The faculty members are highly experienced and qualified, and
+      the department has world-class facilities to support students' learning.
+    </p>
+
+    <p class="mb-5">
+      The program provides students with opportunities to participate in
+      cutting-edge research and internships to gain practical experience.
+      Graduates of the program are well-prepared for various careers in the
+      computing industry or further studies at the Ph.D. level. They are in high
+      demand by employers in various sectors, and their degree from the
+      University of Ibadan positions them to make significant contributions to
+      the industry and society.
+    </p>
+  </div>
+</section>
+
+<!-- Distance learning -->
+<section
+  class="px-5 sm:px-10 md:px-20 xl:px-40 py-20 grid md:grid-cols-2 gap-y-10 py-16 preamble"
+  id="preamble"
+>
+  <div>
+    <img
+      src="https://images.pexels.com/photos/3762940/pexels-photo-3762940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      width="100%"
+      alt="students"
+    />
+  </div>
+  <div class="space-y-4">
+    <h2 class="text-2xl md:text-4xl font-medium second_font text_dark">
+      Distance Learning
+    </h2>
+
+    <p class="mb-3">
+      The distance learning program in Computer Science at the University of
+      Ibadan provides students with a flexible and accessible option to pursue
+      their studies in computing. The program offers the same curriculum as the
+      on-campus program, with courses covering topics such as programming,
+      algorithms, data structures, and computer networks.
+    </p>
+
+    <p class="mb-5">
+      The program is designed to accommodate students' busy schedules and allows
+      them to complete their studies at their own pace. Students have access to
+      course materials and assignments online and can interact with their
+      professors and peers through virtual learning environments. Graduates of
+      the program are well-prepared for careers in the computing industry or
+      further studies at the graduate level.
+    </p>
+  </div>
+</section>
+
+<!-- gold section -->
+<section class="px-5 sm:px-10 md:px-20 mb-20">
+  <div
+    class="mt-5 section_cut max-w-6xl mx-auto p-8 flex flex-col md:flex-row items-start md:items-center gap-5"
+  >
+    <h2 class="font-bold text-xl md:text-2xl mr-5 capitalize">
+      Student
+      <br class="hidden md:block" />
+      Association
+    </h2>
+
+    <p class="flex-1">
+      As the largest and most vibrant student association on campus, we are
+      committed to promoting excellence and innovation in computer science
+      education and research.
+    </p>
+
+    <a
+      class="link_btn link"
+      asp-area=""
+      asp-controller="StdAssociation"
+      asp-action="Index"
+    >
+      <span> Read More </span>
+      <svg
+        class="button-arrow"
+        width="14"
+        height="10"
+        viewBox="0 0 10 10"
+        aria-hidden="true"
+      >
+        <g>
+          <path class="button-arrow__line" d="M0 5h12"></path>
+          <path class="button-arrow__tip" d="M1 1l4 4-4 4"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</section>
