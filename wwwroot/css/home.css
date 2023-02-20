@@ -343,3 +343,33 @@
     grid-template-columns: 1fr;
   }
 }
+
+.NEV_article > img {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.NEV_content li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid var(--border-solid-grey);
+}
+
+.NEV_content li img,
+.NEV_content li aside {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  background-color: var(--main-red);
+}
+
+.NEV_content li aside {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+}

@@ -15,6 +15,7 @@
   --deep-blue: #00718e;
   --border-solid-grey: #cacacaca;
   --gold: #eaaa00;
+  --deep-gold: #de7c01;
   --transition: 0.3s;
   --animation: cubic-bezier(0.075, 0.82, 0.165, 1);
   --faded-brown: #fdf7f2;
@@ -44,7 +45,10 @@ a {
 
 .article_title {
   color: var(--gold);
-  font-weight: 500;
+}
+
+.article_title_deep {
+  color: var(--deep-gold);
 }
 
 .second_bg_color {
