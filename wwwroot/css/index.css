@@ -3,6 +3,7 @@
 
 /* import css in the same directory */
 @import url("home.css");
+@import url("loader.css");
 
 :root {
   --text-dark: #585858;
@@ -37,6 +38,7 @@ body {
   position: relative;
   letter-spacing: -0.25px;
   font-weight: 400;
+  scroll-padding-top: 120px;
 }
 
 a {
@@ -204,6 +206,7 @@ footer {
   background-color: var(--dark);
   width: 100%;
   min-height: 300px;
+  color: var(--faded-white);
 }
 
 /* media queries */

@@ -1,5 +1,12 @@
 ﻿"use strict";
 
+///////////////// Loader //////////////////////
+const loader = document.getElementById("loader");
+
+window.addEventListener("load", function () {
+  loader.classList.remove("loading");
+});
+
 /////////////// NAVBAR //////////////////////
 // Show navbar on scroll up and hide on scroll down
 let lastScrollTop = 0;
@@ -28,10 +35,11 @@ window.addEventListener("scroll", function () {
 
 /////////////// learn more button //////////////////////
 const learnMoreBtn = document.getElementById("learnMore");
+const preamble = document.getElementById("preamble");
 
 learnMoreBtn.addEventListener("click", function () {
   window.scrollTo({
-    top: 1000,
+    top: preamble.offsetTop,
     behavior: "smooth",
   });
 });
