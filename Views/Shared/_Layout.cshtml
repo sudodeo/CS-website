@@ -108,27 +108,107 @@
 
     <footer>
       <div
-        class="site_footer pt-24 px-5 sm:px-10 md:px-20 grid grid-cols-3 gap-5"
+        class="site_footer pt-24 px-5 sm:px-10 md:px-20 grid md:grid-cols-3 gap-x-5 gap-y-10 text-sm pt-32 pb-40"
       >
-        <div>
+        <div class="space-y-10">
           <img
             src="~/images/logo-light.png"
             alt="Department of Computer Science, University of Ibadan"
+            class="logo"
           />
+
+          <p class="capitalize">
+            Computer Science Building <br />
+            Oduduwa Road, 200132 <br />
+            Ibadan, Oyo <br />
+            Main: +2348.0357.94630 <br />
+            <span class="lowercase break-all">
+              mediaresources@mail.ui.edu.ng.
+            </span>
+          </p>
+
+          <p class="text-xs">
+            &copy; 2021 Department of Computer Science, <br />
+            University of Ibadan
+          </p>
         </div>
 
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nulla
-          eaque eligendi voluptas perspiciatis! Quisquam asperiores similique
-          qui incidunt vero quasi, quas eius est. Quas, eum excepturi. Saepe,
-          dolores dicta.
+        <div class="flex justify-between gap-x-2 gap-y-8">
+          <ul class="space-y-8 font-bold">
+            <li>
+              <a
+                href="javascript:void(0)"
+                onclick="document.getElementById('preamble').scrollIntoView({ behavior: 'smooth', block: 'start' }); return false;"
+                >About</a
+              >
+            </li>
+            <li>
+              <a asp-area="" asp-controller="Curriculum" asp-action="Index">
+                Curriculum
+              </a>
+            </li>
+            <li><a href="">News & Events</a></li>
+            <li>
+              <a asp-area="" asp-controller="Programs" asp-action="Index">
+                Programs
+              </a>
+            </li>
+            <li>
+              <a asp-area="" asp-controller="StdAssociation" asp-action="Index">
+                Student Association
+              </a>
+            </li>
+          </ul>
+
+          <ul class="space-y-8 font-semibold">
+            <li><a href="">Intranet</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Research</a></li>
+            <li><a href="">Accessibility</a></li>
+            <li><a href="">Non-Discrimination Statement</a></li>
+          </ul>
         </div>
 
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nulla
-          eaque eligendi voluptas perspiciatis! Quisquam asperiores similique
-          qui incidunt vero quasi, quas eius est. Quas, eum excepturi. Saepe,
-          dolores dicta.
+        <div class="space-y-10">
+          <div>
+            <h2 class="text-2xl font-medium second_font mb-5 text-white">
+              Core Values
+            </h2>
+
+            <p>
+              Diversity, equity, and inclusion are core values of the University
+              of Ibadan's Computer Science Department. We are committed to
+              providing a welcoming and inclusive environment for all members of
+              our community, regardless of race, ethnicity, gender identity,
+              sexual orientation, religion, or socioeconomic background. We
+              believe that a diverse community fosters innovation, creativity,
+              and excellence in teaching, research, and service.
+            </p>
+          </div>
+
+          <ul class="text-xl flex gap-5">
+            <!-- social media -->
+            <li>
+              <a href="https://www.facebook.com/" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
