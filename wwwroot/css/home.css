@@ -74,6 +74,7 @@
   padding-left: 30px;
   justify-self: start;
   font-size: 17px;
+  /* height: max-content; */
 }
 
 @media (max-width: 1024px) {

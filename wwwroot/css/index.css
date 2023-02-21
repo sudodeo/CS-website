@@ -162,6 +162,12 @@ nav.activate_scroll .nav-item:hover {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .main_btn {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
 .main_btn.transparent {
   outline: 1px solid var(--white);
   background: transparent;
