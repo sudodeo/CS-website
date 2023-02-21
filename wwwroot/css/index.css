@@ -34,10 +34,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
   color: var(--text-dark);
