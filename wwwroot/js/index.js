@@ -44,13 +44,6 @@ learnMoreBtn.addEventListener("click", function () {
   });
 });
 
-logo.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
-
 //////////////// TYPEWRITER EFFECT ///////////////////////
 const typedTextSpan = document.querySelector(".dynamic_texts");
 const strings = [

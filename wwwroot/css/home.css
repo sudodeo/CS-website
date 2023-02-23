@@ -105,7 +105,8 @@
   width: max-content;
 }
 
-.link_btn:hover {
+.link_btn:hover,
+.link_btn:focus {
   background-color: var(--link-color);
 }
 
@@ -143,18 +144,21 @@
   transition: translate var(--hoverTransition);
 }
 
-.link:hover .button-arrow__tip {
+.link:hover .button-arrow__tip,
+.link:focus .button-arrow__tip {
   translate: 6px 0;
   transition: translate var(--hoverTransition);
 }
 
-.link:hover .button-arrow__line {
+.link:hover .button-arrow__line,
+.link:focus .button-arrow__line {
   stroke: var(--link-color);
   transform: scale(1);
   transition: transform var(--hoverTransition);
 }
 
-.link_btn:hover .button-arrow__line {
+.link_btn:hover .button-arrow__line,
+.link_btn:focus .button-arrow__line {
   stroke: var(--white);
 }
 
@@ -297,15 +301,18 @@
     transition: 0.7s;
   }
 
-  .research_highlights li:hover > article {
+  .research_highlights li:hover > article,
+  .research_highlights li:focus-within > article {
     translate: 0 0;
   }
 
-  .research_highlights li:hover > article > p {
+  .research_highlights li:hover > article > p,
+  .research_highlights li:focus-within > article > p {
     opacity: 1;
   }
 
-  .research_highlights li:hover > div > img {
+  .research_highlights li:hover > div > img,
+  .research_highlights li:focus-within > div > img {
     translate: 0 -20px;
   }
 }
@@ -362,7 +369,8 @@
   transition: var(--animation) 2s;
 }
 
-.NEV_article:hover > div img {
+.NEV_article:hover > div img,
+.NEV_article:focus-within > div img {
   scale: 1.2;
 }
 

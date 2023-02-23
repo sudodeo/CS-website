@@ -55,7 +55,16 @@
 
     <nav class="px-5 sm:px-10 md:px-20" id="navbar">
       <div class="flex justify-between items-center py-7 nav_content">
-        <button class="logo">
+        <button
+          class="logo"
+          onclick="
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        })
+        "
+        >
           <img
             src="~/images/logo-light.png"
             alt="Department of Computer Science, University of Ibadan"
