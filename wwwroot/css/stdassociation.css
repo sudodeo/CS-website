@@ -40,3 +40,8 @@
     max-width: 90%;
   }
 }
+
+.squares div {
+  --green: #188906;
+  background-color: var(--green);
+}

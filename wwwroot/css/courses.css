@@ -7,3 +7,75 @@
     ),
     var(--bg);
 }
+
+.course_section aside h2 {
+  background-color: var(--main-red);
+  color: var(--white);
+  width: 100%;
+  padding: 10px;
+}
+
+.course_section aside ul li {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-solid-grey);
+  width: 100%;
+  cursor: pointer;
+}
+
+.table_wrapper {
+  flex: 1;
+  overflow-x: auto;
+  border-top: 5px solid var(--main-red);
+  max-height: 80vh;
+}
+
+table {
+  width: 100%;
+  min-width: 500px;
+  border-spacing: 0;
+  position: relative;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 1.5px 0px -1px var(--border-solid-grey);
+}
+
+th,
+td {
+  padding: 12px 10px;
+  text-align: left;
+  max-width: 200px;
+  padding: 10px;
+  border: 1px solid var(--border-solid-grey);
+}
+
+th {
+  text-transform: capitalize;
+  border-top: none;
+  border-bottom: none;
+}
+
+tbody tr td:nth-child(2) {
+  text-transform: capitalize;
+}
+
+tbody tr td:first-child {
+  width: 50px;
+}
+
+tbody tr td:nth-child(3) {
+  width: 130px;
+}
+
+tbody tr td:last-child {
+  width: 50px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--faded-brown);
+}
