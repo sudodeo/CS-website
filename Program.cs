@@ -1,6 +1,12 @@
+using CS_website.Data;
+using Microsoft.EntityFrameworkCore;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddEntityFrameworkNpgsql()
+.AddDbContext<CourseContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("CourseLibraryDB")));
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
