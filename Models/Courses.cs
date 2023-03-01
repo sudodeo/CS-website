@@ -13,11 +13,12 @@ namespace CS_website.Models
     public class Course
     {
         [Key]
-        public string CourseCode { get; set; }
-        public string CourseTitle { get; set; }
-        public string CourseDescription { get; set; }
-        public string CourseStatus { get; set; }
-        public string Level { get; set; }
+        public string code { get; set; }
+        public string level { get; set; }
+        public string title { get; set; }
+        public string description { get; set; }
+        public string status { get; set; }
+        public string units { get; set; }
     }
 
 }
