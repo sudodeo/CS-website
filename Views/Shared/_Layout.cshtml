@@ -60,6 +60,13 @@
     </div>
 
     <nav class="px-5 sm:px-10 md:px-20" id="navbar">
+      <div class="mobile_navigation">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+        commodi voluptate dolores inventore atque ut fugiat fugit, natus officia
+        quos at quibusdam beatae consequuntur ipsa, possimus rem alias omnis
+        nesciunt!
+      </div>
+
       <div class="flex justify-between items-center py-7 nav_content">
         <a
           class="logo"
@@ -70,9 +77,9 @@
           behavior: 'smooth'
         })
         "
-        asp-area="" 
-        asp-controller="Home" 
-        asp-action="Index"
+          asp-area=""
+          asp-controller="Home"
+          asp-action="Index"
         >
           <img
             src="~/images/logo-light.png"
@@ -177,7 +184,9 @@
             </li>
             <li>
               <a asp-area="" asp-controller="StdAssociation" asp-action="Index">
-                Student Association
+                Student
+                <br class="inline-block md:hidden" />
+                Association
               </a>
             </li>
           </ul>
@@ -187,7 +196,13 @@
             <li><a href="">Contact</a></li>
             <li><a href="">Research</a></li>
             <li><a href="">Accessibility</a></li>
-            <li><a href="">Non-Discrimination Statement</a></li>
+            <li>
+              <a href="">
+                Non-Discrimination
+                <br class="inline-block md:hidden" />
+                Statement
+              </a>
+            </li>
           </ul>
         </div>
 

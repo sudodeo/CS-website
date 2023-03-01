@@ -120,6 +120,12 @@
   font-size: 14px;
 }
 
+@media (max-width: 768px) {
+  .link {
+    font-size: 0.7rem;
+  }
+}
+
 .button-arrow {
   --hoverTransition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
   display: inline-block;

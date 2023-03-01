@@ -50,6 +50,17 @@ a {
   display: inline-block;
 }
 
+.mobile_navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--dark);
+  z-index: 999;
+  /* display: none; */
+}
+
 .article_title {
   color: var(--gold);
 }
@@ -239,8 +250,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .logo a img {
-    width: 70%;
+  .logo img {
+    width: 130px;
   }
 
   .hero {
