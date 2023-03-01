@@ -58,6 +58,8 @@ th {
   text-transform: capitalize;
   border-top: none;
   border-bottom: none;
+  border-left: 1px solid var(--border-solid-grey);
+  border-right: 1px solid var(--border-solid-grey);
 }
 
 tbody tr td:nth-child(2) {
@@ -71,7 +73,6 @@ tbody tr td:first-child {
 
 tbody tr td:nth-child(3) {
   width: 130px;
-  text-align: center;
 }
 
 tbody tr td:last-child {

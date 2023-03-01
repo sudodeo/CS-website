@@ -1,74 +1,80 @@
-@{ ViewData["Title"] = "Curriculum"; }
-@model List<Course>
+@{ ViewData["Title"] = "Curriculum"; } @model List<Course>
+  <header class="hero courses flex text-white px-5 sm:px-10 md:px-20 relative">
+    <div
+      class="absolute hero_intro md:mt-80 second_font text-2xl md:text-4xl lg:text-6xl break-all"
+    >
+      Curriculum
+    </div>
+  </header>
 
-<header class="hero courses flex text-white px-5 sm:px-10 md:px-20 relative">
-  <div
-    class="absolute hero_intro md:mt-80 second_font text-3xl md:text-4xl lg:text-6xl break-all"
+  <section
+    class="px-5 sm:px-10 md:px-20 xl:px-40 py-20 flex gap-5 lg:gap-10 w-full course_section"
   >
-    Curriculum
-  </div>
-</header>
+    <aside>
+      <h2 class="text-2xl lg:text-4xl font-medium second_font">Navigation</h2>
+      <ul>
+        <li class="nav-button"><a asp-action="Index">All</a></li>
+        <li class="nav-button w-full">
+          <a asp-action="Index" asp-route-level="100">100 Level</a>
+        </li>
+        <li class="nav-button w-full">
+          <a asp-action="Index" asp-route-level="200">200 Level</a>
+        </li>
+        <li class="nav-button w-full">
+          <a asp-action="Index" asp-route-level="300">300 Level</a>
+        </li>
+        <li class="nav-button w-full">
+          <a asp-action="Index" asp-route-level="400 w-full">400 Level</a>
+        </li>
+        <li class="nav-button">
+          <a asp-action="Index" asp-route-level="500 w-full">500 Level</a>
+        </li>
+      </ul>
+    </aside>
 
-<section
-  class="px-5 sm:px-10 md:px-20 xl:px-40 py-20 flex gap-5 lg:gap-10 w-full course_section"
->
-  <aside>
-    <h2 class="text-2xl lg:text-4xl font-medium second_font">Navigation</h2>
-    <ul>
-      <li class="nav-button"><a asp-action="Index">All</a></li>
-      <li class="nav-button"><a asp-action="Index" asp-route-level="100">100 Level</a></li>
-      <li class="nav-button"><a asp-action="Index" asp-route-level="200">200 Level</a></li>
-      <li class="nav-button"><a asp-action="Index" asp-route-level="300">300 Level</a></li>
-      <li class="nav-button"><a asp-action="Index" asp-route-level="400">400 Level</a></li>
-      <li class="nav-button"><a asp-action="Index" asp-route-level="500">500 Level</a></li>
-    </ul>
+    <div class="table_wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Course</th>
+            <th>Course Code</th>
+            <th>Status</th>
+            <th>Units</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach (var course in Model) {
+          <tr>
+            <td>@course.level</td>
+            <td>@course.title</td>
+            <td>@course.code</td>
+            <td>@course.status</td>
+            <td>@course.units</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-  </aside>
-
-  <div class="table_wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th>Year</th>
-          <th>Course</th>
-          <th>Course Code</th>
-          <th>Status</th>
-          <th>Units</th>
-        </tr>
-      </thead>
-      <tbody>
-         @foreach (var course in Model)
-        {
-            <tr>
-                <td>@course.level</td>
-                <td>@course.title</td>
-                <td>@course.code</td>
-                <td>@course.status</td>
-                <td>@course.units</td>
-            </tr>
-        }
-      </tbody>
-    </table>
-  </div>
-</section>
-
-@section Scripts {
+  @section Scripts {
   <script type="text/javascript">
-   $(document).on('click', '.li.nav-button a', function (event) {
-    event.preventDefault();
-    var url = $(this).data('url');
-    $.ajax({
+    $(document).on("click", ".li.nav-button a", function (event) {
+      event.preventDefault();
+      var url = $(this).data("url");
+      $.ajax({
         url: url,
-        type: 'GET',
+        type: "GET",
         success: function (data) {
-            // Update the table with the returned data
-            $('.table_wrapper').html(data);
+          // Update the table with the returned data
+          $(".table_wrapper").html(data);
         },
         error: function (xhr, status, error) {
-            // Handle the error
-        }
+          // Handle the error
+        },
+      });
     });
-});
-
-</script>
-}
+  </script>
+  }</Course
+>
