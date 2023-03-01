@@ -19,12 +19,12 @@ public class CurriculumController : Controller
 
     public IActionResult Index(int? level)
     {          // Get all courses from the database
-        var courses = _context.Course.OrderBy(c => c.code).ToList();
+        var courses = _context.Course.OrderBy(c => c.Code).ToList();
         // Console.WriteLine(level);
         // // Filter courses by year if year parameter is specified
         if (level.HasValue)
         {
-            courses = courses.Where(c => c.level == level.ToString()).ToList();
+            courses = courses.Where(c => c.Level == level.ToString()).ToList();
         }
 
         // Pass the courses to the view
