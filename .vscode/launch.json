@@ -31,5 +31,6 @@
             "type": "coreclr",
             "request": "attach"
         }
-    ]
+    ],
+    "requireExactSource": false
 }
