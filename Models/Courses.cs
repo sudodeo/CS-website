@@ -6,19 +6,28 @@ using System.Linq;
 using System.Web;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace CS_website.Models
 {
     [Table("courses", Schema = "public")]
     public class Course
     {
         [Key]
-        public string code { get; set; }
-        public string level { get; set; }
-        public string title { get; set; }
-        public string description { get; set; }
-        public string status { get; set; }
-        public string units { get; set; }
-    }
+        [Column("code")]
+        public string Code { get; set; } = null!;
 
+        [Column("level")]
+        public string Level { get; set; } = null!;
+
+        [Column("title")]
+        public string Title { get; set; } = null!;
+
+        [Column("description")]
+        public string Description { get; set; } = null!;
+
+        [Column("status")]
+        public string Status { get; set; } = null!;
+
+        [Column("units")]
+        public string Units { get; set; } = null!;
+    }
 }
