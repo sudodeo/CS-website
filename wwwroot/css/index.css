@@ -61,13 +61,13 @@ a {
   color: var(--white);
   visibility: hidden;
   opacity: 0;
-  animation: fadeOut 0.2s ease-in-out;
+  animation: fadeOut 0.3s ease-in-out;
 }
 
 .mobile_navigation.show {
   visibility: visible;
   opacity: 1;
-  animation: fadeIn 0.2s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {
