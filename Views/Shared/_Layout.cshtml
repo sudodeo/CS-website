@@ -60,27 +60,78 @@
     </div>
 
     <nav class="px-5 sm:px-10 md:px-20" id="navbar">
-      <div class="mobile_navigation">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
-        commodi voluptate dolores inventore atque ut fugiat fugit, natus officia
-        quos at quibusdam beatae consequuntur ipsa, possimus rem alias omnis
-        nesciunt!
-      </div>
+      <!-- mobile navigation -->
+      <aside
+        class="px-5 sm:px-10 md:px-20 mobile_navigation"
+        id="mobileNavigation"
+      >
+        <div class="flex items-center justify-between pt-5 pb-2">
+          <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">
+            <img
+              src="~/images/logo-light.png"
+              alt="Department of Computer Science, University of Ibadan"
+            />
+          </a>
+
+          <div class="block sm:hidden text-white text-2xl">
+            <button class="p-2" id="closeBtn">
+              <i class="bx bx-x"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- mobile links -->
+        <div class="py-7">
+          <ul class="space-y-10 flex flex-col justify-center items-center">
+            <li class="menu_link">
+              <a asp-area="" asp-controller="Home" asp-action="Index"> Home </a>
+            </li>
+            <li class="menu_link">
+              <a asp-area="" asp-controller="Curriculum" asp-action="Index">
+                Curriculum
+              </a>
+            </li>
+            <li class="menu_link">
+              <a asp-area="" asp-controller="Programs" asp-action="Index">
+                Programs
+              </a>
+            </li>
+            <li class="menu_link">
+              <a asp-area="" asp-controller="StdAssociation" asp-action="Index">
+                Nacos UI
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="flex justify-center items-center gap-5 pt-7">
+          <!-- social media -->
+          <li class="menu_link">
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="menu_link">
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="menu_link">
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="menu_link">
+            <a href="https://www.linkedin.com/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+      </aside>
+      <!-- mobile navigation ends -->
 
       <div class="flex justify-between items-center py-7 nav_content">
-        <a
-          class="logo"
-          onclick="
-        window.scroll({
-          top: 0,
-          left: 0,
-          behavior: 'smooth'
-        })
-        "
-          asp-area=""
-          asp-controller="Home"
-          asp-action="Index"
-        >
+        <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">
           <img
             src="~/images/logo-light.png"
             alt="Department of Computer Science, University of Ibadan"
@@ -112,9 +163,7 @@
         </ul>
 
         <div class="block sm:hidden text-white">
-          <button
-            class="flex items-center px-3 py-2 text-white hover:text-white"
-          >
+          <button class="flex items-center px-3 py-2" id="menuBtn">
             <svg
               class="fill-current h-4 w-4"
               viewBox="0 0 20 20"

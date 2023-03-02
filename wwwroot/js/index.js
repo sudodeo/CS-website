@@ -33,6 +33,28 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollTop;
 });
 
+/////////////// Show hide menu bar //////////////////////
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("mobileNavigation");
+const closeBtn = document.getElementById("closeBtn");
+// get all links in the menu
+const menuLinks = document.querySelectorAll(".menu_link");
+
+menuBtn.addEventListener("click", function () {
+  menu.classList.toggle("show");
+});
+
+closeBtn.addEventListener("click", function () {
+  menu.classList.toggle("show");
+});
+
+// close menu when clicking on a link
+menuLinks.forEach(function (link) {
+  link.addEventListener("click", function () {
+    menu.classList.remove("show");
+  });
+});
+
 /////////////// learn more button //////////////////////
 const learnMoreBtn = document.getElementById("learnMore");
 const preamble = document.getElementById("preamble");
